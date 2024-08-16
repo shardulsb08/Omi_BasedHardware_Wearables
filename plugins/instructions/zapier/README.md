@@ -1,4 +1,4 @@
-1. Connect to Zapier and find the Secret Key 👉 [Zapier x Friend](https://based-hardware--plugins-api.modal.run/setup-zapier).
+1. Connect to Zapier and find the Secret Key 👉 [Zapier x Friend](https://based-hardware-development--plugins-api.modal.run/setup-zapier).
 
 #### --
 
