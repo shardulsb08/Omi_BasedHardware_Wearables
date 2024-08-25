@@ -33,10 +33,12 @@ workflows:
       - name: Hi @thinh here
         script: |
           pwd
-          /usr/local/share/android-sdk/tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk --version
-          /usr/local/share/android-sdk/tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk --list
           which brew
           flutter doctor -v
+          curl --fail --show-error --silent --output commandlinetools-mac-11076708_latest.zip --connect-timeout 10.00 --max-time 120.00 https://dl.google.com/android/repository/commandlinetools-mac-11076708_latest.zip
+          7z -bd x commandlinetools-mac-11076708_latest.zip 
+          ./cmdline-tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk --version
+          ./cmdline-tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk --list
       - name: Install opus
         script: |
           brew install opus
