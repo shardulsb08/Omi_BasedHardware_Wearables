@@ -25,7 +25,7 @@ workflows:
       events:
         - push #TODO
       branch_patterns:
-        - pattern: '*_codemagic_' # TODO
+        - pattern: '*_codemagic_*' # TODO
           include: true
           source: true
     working_directory: app
