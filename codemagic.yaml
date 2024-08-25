@@ -36,6 +36,7 @@ workflows:
           /usr/local/share/android-sdk/tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk --version
           /usr/local/share/android-sdk/tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk --list
           which brew
+          flutter doctor -v
       - name: Install opus
         script: |
           brew install opus
