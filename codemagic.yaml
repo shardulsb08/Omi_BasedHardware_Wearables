@@ -42,7 +42,8 @@ workflows:
           #./cmdline-tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk "ndk;27.0.12077973"
           mkdir -p android-sdk
           ./cmdline-tools/bin/sdkmanager --sdk_root=./android-sdk --update
-          ANDROID_HOME="$(pwd)/android-sdk"
+          echo ANDROID_HOME="$(pwd)/android-sdk" >> $CM_ENV
+          flutter config --android-sdk "$(pwd)/android-sdk"
           flutter doctor -v
       - name: Install opus
         script: |
