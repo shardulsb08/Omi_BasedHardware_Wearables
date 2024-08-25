@@ -15,7 +15,7 @@ workflows:
       flutter: 3.22.3   # Define the channel name, version (e.g. v1.13.4), or fvm for Flutter Version Management
       xcode: 15.4       # Define latest, edge or version (e.g. 11.2)
       cocoapods: 1.15.2 # Define default or version
-      ndk: 27.0.12077973          # Define default or revision (e.g. r19c)
+      #ndk: r27          # Define default or revision (e.g. r19c)
       java: 17          # Define default, or platform version (e.g. 11)
       #ruby: 2.7.2       # Define default or version
       #node: 12.14.0     # Define default, latest, current, lts, carbon (or another stream), nightly or version
