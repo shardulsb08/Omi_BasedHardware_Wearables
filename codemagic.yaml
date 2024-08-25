@@ -37,6 +37,7 @@ workflows:
       - name: Install opus
         script: |
           brew install opus
+          brew install opus-tools
       - name: Set up .env
         script: |
           echo OPENAI_API_KEY=$OPENAI_API_KEY >> .env
