@@ -72,12 +72,10 @@ workflows:
       - name: Set up local.properties
         script: |
           pwd
-          echo $CM_BUILD_DIR
-          ll $CM_BUILD_DIR
-          echo $HOME
-          echo "flutter.sdk=$HOME/programs/flutter" > "$CM_BUILD_DIR/android/local.properties"
+          echo "flutter.sdk=$HOME/programs/flutter" > "$(pwd)/android/local.properties"
       - name: Get Flutter packages
         script: |
+          pwd
           flutter packages pub get
       - name: Run build runner
         script: |
