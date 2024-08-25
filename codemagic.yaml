@@ -108,13 +108,13 @@ workflows:
           #BUILD_NUMBER=$(($(google-play get-latest-build-number --package-name "$PACKAGE_NAME" --tracks="$GOOGLE_PLAY_TRACK") + 1))      
           # Should use bump version automatically by CI
           # Not support arm64(arm64-v8a), cause Opus
-          #flutter build appbundle \
-          #  --flavor prod \
-          #  --target-platform=android-arm,android-x64
+          flutter build appbundle \
+            --flavor prod
+          # --target-platform=android-arm,android-x64
 
-          flutter build apk \
-            --flavor prod \
-            --split-per-abi
+          #flutter build apk \
+          #  --flavor prod \
+          #  --split-per-abi
 
           #--build-name="$BUILD_VERSION" \
           #--build-number=$BUILD_NUMBER
