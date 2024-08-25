@@ -78,6 +78,7 @@ android {
         versionName flutterVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+		ndk.abiFilters 'armeabi-v7a','x86','x86_64'
     }
 
     signingConfigs {
