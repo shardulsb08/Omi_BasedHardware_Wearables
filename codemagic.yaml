@@ -57,7 +57,7 @@ workflows:
         script: |
           which flutterfire
           dart pub global activate flutterfire_cli
-          flutterfire config --platforms="android,ios" --out=lib/firebase_options_prod.dart --ios-bundle-id=com.friend-app-with-wearable.ios12 --android-app-id=com.friend.ios --android-out=android/app/src/prod/  --ios-out=ios/Config/Prod/ --service-account="./firebase_key.json" --project="based-hardware" --ios-target="Runner" --yes
+          flutterfire config --platforms="android,ios" --out=lib/firebase_options_prod.dart --ios-bundle-id=com.friend-app-with-wearable.ios12 --android-package-name=com.friend.ios --android-out=android/app/src/prod/  --ios-out=ios/Config/Prod/ --service-account="./firebase_key.json" --project="based-hardware" --ios-target="Runner" --yes --macos-bundle-id="xyz"
       - name: Set up local.properties
         script: |
           echo "flutter.sdk=$HOME/programs/flutter" > "$CM_BUILD_DIR/android/local.properties"
