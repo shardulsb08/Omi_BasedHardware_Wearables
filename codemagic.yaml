@@ -39,7 +39,8 @@ workflows:
           7z -bd x commandlinetools-mac-11076708_latest.zip 
           #./cmdline-tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk --version
           #./cmdline-tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk --list
-          ./cmdline-tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk "ndk;27.0.12077973"
+          #./cmdline-tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk "ndk;27.0.12077973"
+          ./cmdline-tools/bin/sdkmanager --sdk_root=/usr/local/share/android-sdk --update
           flutter doctor -v
       - name: Install opus
         script: |
